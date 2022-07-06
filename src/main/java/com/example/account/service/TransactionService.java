@@ -119,7 +119,7 @@ public class TransactionService {
         if (!Objects.equals(transaction.getAmount(), amount)) {
             throw new AccountException(ErrorCode.CANCEL_MUST_FULLY);
         }
-        if(transaction.getTransactedAt().isBefore(LocalDateTime.now().minusYears(1))) {
+        if (transaction.getTransactedAt().isBefore(LocalDateTime.now().minusYears(1))) {
             throw new AccountException(ErrorCode.TOO_OLD_ORDER_TO_CANCEL);
         }
     }
