@@ -15,7 +15,7 @@ public class AccountController {
     private final RedisTestService redisTestService;
 
     @GetMapping("/get-lock")
-    public String getLock(){
+    public String getLock() {
         return redisTestService.getLock();
     }
 
