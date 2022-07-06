@@ -106,6 +106,8 @@ public class TransactionService {
 
         validateCancelBalance(transaction, account, amount);
 
+        account.cancelBalance(amount);
+
         return TransactionDto.fromEntity(
                 saveAndGetTransaction(CANCEL, S, account, amount));
     }
